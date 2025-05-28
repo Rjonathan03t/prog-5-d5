@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 
 public class CoffeeMachine {
     private double balance = 0.0;
@@ -17,6 +18,14 @@ public class CoffeeMachine {
         balance += amount;
         System.out.println("Current balance: " + balance);
         displayMenu();
+    }
+
+    public void promptUserForCoffeeSelection() {
+        Scanner scanner = new Scanner(System.in);
+        displayMenu();
+        System.out.print("Please enter the name of the coffee you want: ");
+        String userChoice = scanner.nextLine();
+        choose(userChoice);
     }
 
     public void choose(String type) {
