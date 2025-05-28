@@ -11,17 +11,13 @@ public class CoffeeMachine {
     }
 
     public void pay(double amount) {
+        Scanner scanner = new Scanner(System.in);
         if (amount <= 0) {
             System.out.println("Please insert a valid amount.");
             return;
         }
         balance += amount;
         System.out.println("Current balance: " + balance);
-        displayMenu();
-    }
-
-    public void promptUserForCoffeeSelection() {
-        Scanner scanner = new Scanner(System.in);
         displayMenu();
         System.out.print("Please enter the name of the coffee you want: ");
         String userChoice = scanner.nextLine();

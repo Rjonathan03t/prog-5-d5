@@ -5,7 +5,6 @@ public class Main {
         machine.addCoffee(new Coffee("Latte", 2.0, 3));
 
         machine.pay(2.0);
-        machine.promptUserForCoffeeSelection();
         Coffee coffee = machine.getCoffee();
         if (coffee != null) {
             System.out.println("Enjoy your " + coffee.getType() + "!");
